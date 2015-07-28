@@ -1,16 +1,28 @@
 <html>
 	<head>
 		<link href="style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+		<div id="modal-container">
+			<div id="header">
+				<div id="output">Output</div>
+				<i class="fa fa-angle-down" id="minimize"></i>
+			</div>
+			<iframe id="modal" src="http://www.awwwards.com">
+			</iframe>
+		</div>
 		<div class="panel">
 			<div class="tabs">
-				<div class="tab">
-					<p>Instructor</p>
-				</div>
+				<div class="tab" id="instructor">Instructor</div>	
+				<div class="tab" id="html">instructor.index.html</div>
+				<div class="tab" id="css">instructor.style.css</div>
+				<div class="tab" id="js">instructor.script.js</div>
 			</div>
+		
 			<textarea></textarea>
-		</div>
+			</div>
 		<div class="panel">
 			<div class="tabs">
 				<div class="tab">
