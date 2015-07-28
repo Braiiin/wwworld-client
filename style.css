@@ -1,5 +1,4 @@
 * {
-	float:left;
 	position:relative;
 	margin:0;
 	padding:0;
@@ -14,30 +13,41 @@ html, body {
 .panel {
 	width:50%;
 	height:100%;
-	overflow-y:scroll;
+	overflow:hidden;
+	z-index:1;
 }
 
-textarea {
+.windows {
 	width:100%;
 	height:100%;
+}
+
+.window {
+	width:100%;
+	height:calc(100% - 30px);
 	background-color:#333;
 	color:#c90;
+	overflow-x:scroll;
 }
 
 .tabs {
 	padding:0.25em;
 	font-size:24px;
 	background: red;
+	box-sizing:border-box;
+}
+
+.tab,.tabs {
+	float:left;
 }
 
 #modal {
 	position:absolute;
-	z-index:2;
+	z-index:10;
 	background:white;
 	width:100%;
 	height:80%;
 	top:20%;
-
 }
 
 #header {
