@@ -53,11 +53,23 @@ textarea {
 
 }
 
-#minimize {
-	position:absolute;
+.minimize {
 	float:right;
-
+	height:2em;
+	width:2em;
+	background-color:rgba(0,0,0,0.1);
+	text-align:center;
 }
+
+.minimize .bar {
+	width:0.6em;
+	height:0.15em;
+	background-color:#FFF;
+	float:none;
+	display:inline-block;
+	margin:0.9em 0;
+}
+
 #modal-container {
 	position:fixed;
 	bottom:0px;
