@@ -2,6 +2,7 @@
 	<head>
 		<!-- jQuery -->
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		
 		<!-- Firebase -->
 		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
@@ -14,29 +15,50 @@
 		<link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.1.1/firepad.css" />
 		<script src="https://cdn.firebase.com/libs/firepad/1.1.1/firepad.min.js"></script>
 		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!-- Fonts -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
 		<!-- Custom -->
-		<script src="script.js"></script>
-		<link href="style.css" rel="stylesheet">
+		<script src="scripts/script.js"></script>
+		<link href="styles/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="panel">
+		<div id="modal-container">
+			<div id="header">
+				<div id="output">Output</div>
+				<span class="minimize">
+					<span class="bar"></span>
+				</span>
+			</div>
+			<iframe id="modal" src="http://www.awwwards.com">
+			</iframe>
+		</div>
+		<div data-panel="a" class="panel col-md-6">
 			<div class="tabs">
-				<div class="tab">
-					<p>Instructor</p>
-				</div>
+				<div data-window="1" class="tab" id="instructor">Instructor</div>	
+				<div data-window="2" class="tab" id="html">instructor.index.html</div>
+				<div data-window="3" class="tab" id="css">instructor.style.css</div>
+				<div data-window="4"class="tab" id="js">instructor.script.js</div>
 			</div>
 			<div class="windows">
-				<div class="window" id="sync"></div>
+				<div data-window="1" class="window" id="sync"></div>
+				<div data-window="2" class="window"></div>
+				<div data-window="3" class="window"></div>
+				<div data-window="4" class="window"></div>
 			</div>
 		</div>
-		<div class="panel">
+		<div data-panel="b" class="panel col-md-6">
 			<div class="tabs">
-				<div class="tab">
+				<div data-window="5" class="tab">
 					<p>HTML</p>
 				</div>
 			</div>
 			<div class="windows">
-				<div class="window"></div>
+				<div data-window="5" class="window"></div>
 			</div>
 		</div>
 	</body>
