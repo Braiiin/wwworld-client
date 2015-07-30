@@ -33,9 +33,18 @@ html, body {
 	height:100%;
 	color:#c90;
 	overflow-x:scroll;
-	border:1px solid #545454;
 	top:-30px;
 	background:white;
+}
+
+.window pre[class*="language-"], code {
+	margin:0;
+	width:100%;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	border:none;
 }
 
 .tabs {
@@ -85,6 +94,7 @@ html, body {
 	width:100%;
 	height:calc(100% - 30px);
 	top:30px;
+	border:none;
 }
 
 #header {

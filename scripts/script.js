@@ -9,9 +9,9 @@ $(document).ready(function() {
 	 */
 
 	// Initialize existing window with synchronization
-	function init_window_sync(selector, language) {
-		var firepadRef = new Firebase('wwworld.firebaseio.com');  // New Firebase connection
-		var codeMirror = CodeMirror($(selector).get()[0], {  // Create CodeMirror (with line numbers and the JavaScript mode).
+	function init_window_sync(id, selector, language) {
+		var firepadRef = new Firebase('wwworld.firebaseio.com/firepads/'+id);  // New Firebase connection
+		var codeMirror = CodeMirror($(selector).get()[0], {  // Create CodeMirror (with line numbers and the designated mode).
 			lineNumbers: true,
 			mode: language
 		});
@@ -20,7 +20,8 @@ $(document).ready(function() {
 		});
 	}
 
-	init_window_sync('#sync', 'javascript');
+	init_window_sync('instructor-html', '#instr-html', 'javascript');
+	init_window_sync('student-html', '#stud-html', 'javascript');
 
 	/*
 	 * Modal controls and listeners
@@ -34,4 +35,11 @@ $(document).ready(function() {
 	}
 
 	init_modal('#modal-container');
+
+	/*
+	 * Code Editor manager
+	 */
+
+	// initialize existing element as code editor
+	
 });
